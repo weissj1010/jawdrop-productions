@@ -5,7 +5,7 @@ import { X, Play } from "lucide-react";
 import pcfImg from "@assets/PCF.PNG";
 import drinkImg from "@assets/new drink.png";
 import mizBtsVideo from "@assets/Miz BTS.MOV";
-import joeMamasVideo from "@assets/joe-mamas-website-showcase.mov";
+import joeMamasVideo from "@assets/joe-mamas-website-showcase.MOV";
 import weddingDroneVideo from "@assets/Wedding Drone.MOV";
 import reviewsVideo from "@assets/Reviews.mp4";
 import jimHouseVideo from "@assets/JimHouseDroneReel-4x3.mp4";
