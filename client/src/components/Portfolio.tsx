@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { X, Play } from "lucide-react";
 import pcfImg from "@assets/PCF.PNG";
-import drinkImg from "@assets/new drink.png";
+import drinkImg from "@assets/new drink.PNG";
 import mizBtsVideo from "@assets/Miz BTS.MOV";
 import joeMamasVideo from "@assets/joe-mamas-website-showcase.MOV";
 import weddingDroneVideo from "@assets/Wedding Drone.MOV";
