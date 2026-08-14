@@ -8,7 +8,7 @@ import mizBtsVideo from "@assets/Miz BTS.MOV";
 import joeMamasVideo from "@assets/joe-mamas-website-showcase.MOV";
 import weddingDroneVideo from "@assets/Wedding Drone.MOV";
 import reviewsVideo from "@assets/Reviews.mp4";
-import jimHouseVideo from "@assets/JimHouseDroneReel-4x3.mp4";
+const jimHouseVideo = "https://jawdrop-productions-eta.vercel.app/assets/JimHouseDroneReel-4x3-DZJLnZOR.mp4";
 
 type PortfolioItem = {
   id: number;
