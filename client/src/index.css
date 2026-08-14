@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 88%);
+  --foreground: hsl(0, 0%, 15%);
+  --muted: hsl(0, 0%, 92%);
+  --muted-foreground: hsl(0, 0%, 25%);
+  --popover: hsl(0, 0%, 90%);
+  --popover-foreground: hsl(0, 0%, 15%);
+  --card: hsl(0, 0%, 90%);
+  --card-foreground: hsl(0, 0%, 15%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* JAW Drop Productions Brand Colors - Metallic & Grayscale */
+  --jaw-blue: hsl(210, 15%, 25%);
+  --jaw-gray: hsl(0, 0%, 15%);
+  --jaw-gold: hsl(45, 15%, 70%);
+  --jaw-light: hsl(0, 0%, 92%);
+  --jaw-silver: hsl(0, 0%, 85%);
+  --jaw-dark-silver: hsl(0, 0%, 45%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom brand color utilities */
+.text-jaw-blue {
+  color: var(--jaw-blue);
+}
+
+.text-jaw-gray {
+  color: var(--jaw-gray);
+}
+
+.text-jaw-gold {
+  color: var(--jaw-gold);
+}
+
+.text-jaw-silver {
+  color: var(--jaw-silver);
+}
+
+.text-jaw-dark-silver {
+  color: var(--jaw-dark-silver);
+}
+
+.bg-jaw-blue {
+  background-color: var(--jaw-blue);
+}
+
+.bg-jaw-gray {
+  background-color: var(--jaw-gray);
+}
+
+.bg-jaw-gold {
+  background-color: var(--jaw-gold);
+}
+
+.bg-jaw-light {
+  background-color: var(--jaw-light);
+}
+
+.bg-jaw-silver {
+  background-color: var(--jaw-silver);
+}
+
+.bg-jaw-dark-silver {
+  background-color: var(--jaw-dark-silver);
+}
+
+.border-jaw-blue {
+  border-color: var(--jaw-blue);
+}
+
+.border-jaw-silver {
+  border-color: var(--jaw-silver);
+}
+
+.hover\:bg-jaw-blue:hover {
+  background-color: var(--jaw-blue);
+}
+
+.hover\:bg-jaw-gold:hover {
+  background-color: var(--jaw-gold);
+}
+
+.hover\:bg-jaw-silver:hover {
+  background-color: var(--jaw-silver);
+}
+
+.hover\:text-jaw-blue:hover {
+  color: var(--jaw-blue);
+}
+
+.hover\:text-jaw-gold:hover {
+  color: var(--jaw-gold);
+}
+
+.hover\:text-jaw-silver:hover {
+  color: var(--jaw-silver);
+}
+
+/* Gold shimmer animation */
+@keyframes shimmerGold {
+  0% {
+    background-position: -200% center;
+    -webkit-text-fill-color: #C5A44E;
+  }
+  100% {
+    background-position: 200% center;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.shimmer-gold {
+  animation: shimmerGold 2s ease-in-out forwards;
+  animation-delay: 2.6s;
+  background: linear-gradient(
+    90deg,
+    #A8893A 0%,
+    #C5A44E 25%,
+    #D4B65C 50%,
+    #C5A44E 75%,
+    #A8893A 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #C5A44E;
+}
+
+.shimmer-gold-active {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #A8893A 0%,
+    #C5A44E 25%,
+    #D4B65C 50%,
+    #C5A44E 75%,
+    #A8893A 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmerGoldLoop 3s linear infinite;
+}
+
+@keyframes shimmerGoldLoop {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
